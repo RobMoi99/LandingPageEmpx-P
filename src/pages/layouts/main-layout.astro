@@ -1,0 +1,36 @@
+---
+import Nav from "../components/Nav";
+import Main from "../components/MainPage/Main";
+import Second from "../components/MainPage/Second";
+import Third from "../components/MainPage/Third";
+import Footer from "../components/Footer";
+import NavResponsiveMenu from "../components/NavResponsiveMenu";
+---
+
+<html lang="en">
+  
+  <head>
+    <style is:global>
+      /* Unscoped, delivered as-is to the browser.
+         Applies to all <h1> tags on your site. */
+        html { 
+          scroll-behavior: smooth;
+          background-color: #A9A9A9;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" />
+  </head>
+  <body>
+    <main>
+      <Nav client:load />
+
+
+      <slot />
+
+      <!-- All the different pages to be rendered here -->
+    </main>
+    <Footer />
+  </body>
+</html>
